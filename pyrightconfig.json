@@ -1,0 +1,7 @@
+{
+  "stubPath": "./src/fornex/typings",
+  "useLibraryCodeForTypes": true,
+  "reportUnusedImport": "error",
+  "reportUnusedExpression": "error",
+  "reportGeneralTypeIssues": true
+}
