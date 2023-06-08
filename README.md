@@ -8,24 +8,13 @@ pyright
 ```
 
 ```
-Loading configuration file at /home/serg/src/tests/test-pyright/pyrightconfig.json
-Assuming Python version 3.10
-Assuming Python platform Linux
-No include entries specified; assuming /home/serg/src/tests/test-pyright
-Auto-excluding **/node_modules
-Auto-excluding **/__pycache__
-Auto-excluding **/.*
-stubPath /home/serg/src/tests/test-pyright/src/fornex/typings is not a valid directory.
-Searching for source files
-Found 3 source files
-/home/serg/src/tests/test-pyright/example/models.py
-  /home/serg/src/tests/test-pyright/example/models.py:7:35 - error: Type "OSTemplate" cannot be assigned to type variable "_M@ForeignKey"
-    Type "OSTemplate" is incompatible with bound type "Model | None" for type variable "_M@ForeignKey"
-      Type "OSTemplate" cannot be assigned to type "Model | None"
-        "OSTemplate" is incompatible with "Model"
-        Type cannot be assigned to type "None" (reportGeneralTypeIssues)
-  /home/serg/src/tests/test-pyright/example/models.py:22:12 - error: Cannot access member "objects" for type "Type[OSTemplate]"
-    Member "objects" is unknown (reportGeneralTypeIssues)
-2 errors, 0 warnings, 0 informations
-Completed in 0.914sec
+/home/serg/src/pyright-examples/example.py
+  /home/serg/src/pyright-examples/example.py:5:24 - error: Expression of type "tuple[Type[DjangoFilterBackend]]" cannot be assigned to declared type "Sequence[Type[_FilterBackendProtocol]]"
+    "DjangoFilterBackend" is incompatible with protocol "_FilterBackendProtocol"
+    Type "Type[DjangoFilterBackend]" cannot be assigned to type "Type[_FilterBackendProtocol]"
+      "filter_queryset" is an incompatible type
+        Type "(request: Unknown, queryset: Unknown, view: Unknown) -> (Unknown | Any | QuerySet[Unknown])" cannot be assigned to type "(request: Any, queryset: _Q@filter_queryset, view: APIView) -> _Q@filter_queryset"
+          Function return type "Unknown | Any | QuerySet[Unknown]" is incompatible with type "_Q@filter_queryset"
+            Type "Unknown | Any | QuerySet[Unknown]" cannot be assigned to type "_Q@filter_queryset" (reportGeneralTypeIssues)
+1 error, 0 warnings, 0 informations
 ```
